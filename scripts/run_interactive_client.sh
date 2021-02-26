@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 docker run -it \
   --rm \
   --link clickhouse-workshop-server:clickhouse-server \

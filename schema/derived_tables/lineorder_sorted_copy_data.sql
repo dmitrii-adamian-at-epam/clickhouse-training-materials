@@ -1,0 +1,1 @@
+INSERT INTO lineorder_sorted_by_part SELECT * FROM lineorder

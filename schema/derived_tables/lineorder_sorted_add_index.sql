@@ -1,0 +1,1 @@
+ALTER TABLE lineorder_sorted_by_part ADD INDEX part_id_minmax (LO_PARTKEY) TYPE minmax GRANULARITY 4

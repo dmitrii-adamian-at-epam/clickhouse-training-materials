@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 docker run -d \
   --name clickhouse-workshop-server \
   --ulimit nofile=262144:262144 \
