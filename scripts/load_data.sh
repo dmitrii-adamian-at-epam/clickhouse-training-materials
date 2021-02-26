@@ -21,6 +21,9 @@ time "${SCRIPTS_PATH}/run_client.sh" --format_csv_delimiter '|' --query "INSERT 
 echo "Loading lineorder table"
 time "${SCRIPTS_PATH}/run_client.sh" --format_csv_delimiter '|' --query "INSERT INTO lineorder FORMAT CSV" < lineorder.tbl
 
+echo "Creating lineorder_partition_by_year table"
+time "${SCRIPTS_PATH}/run_client.sh" --query "$(cat ${WORKSHOP_REPO_PATH}/schema/derived_tables/lineorder_partition_by_year.sql)"
+
 echo "Creating lineorder_sorted_by_part table"
 time "${SCRIPTS_PATH}/run_client.sh" --query "$(cat ${WORKSHOP_REPO_PATH}/schema/derived_tables/lineorder_sorted_create.sql)"
 
